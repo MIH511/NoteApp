@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_back"
+        app:tint="@color/ColorWhite" />
+
+    <ImageView
+        android:id="@+id/ImDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_tick"
+        app:tint="@color/ColorWhite" />
+
+    <EditText
+        android:id="@+id/etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/imBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/ColorWhite"
+        android:background="@null"
+        android:textColorHint="@color/ColorGray"
+        android:textSize="@dimen/_14ssp"
+        android:inputType="text"
+        android:fontFamily="@font/manrope_bold"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:hint="@string/notes_title"/>
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/etNoteTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/ColorWhite"
+        android:textColorHint="@color/ColorGray"
+        android:textSize="@dimen/_8ssp"
+        android:fontFamily="@font/manrope_bold"
+        android:ellipsize="end"
+        android:maxLines="1"
+        />
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvDateTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@color/ColorBlue"/>
+
+        <EditText
+            android:id="@+id/etNoteSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:background="@null"
+            android:textColor="@color/ColorWhite"
+            android:fontFamily="@font/manrope_regular"
+            android:textColorHint="@color/ColorGray"
+            android:textSize="@dimen/_10ssp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:inputType="text"
+            android:hint="@string/notes_sub_title"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etNoteDes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/l1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/ColorWhite"
+        android:background="@null"
+        android:textColorHint="@color/ColorGray"
+        android:textSize="@dimen/_12ssp"
+        android:inputType="textMultiLine"
+        android:fontFamily="@font/manrope_regular"
+        android:hint="@string/notes_desc"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
